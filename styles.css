@@ -1,0 +1,49 @@
+[10:30 pm, 15/08/2004]:Shahista L
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: lightblue; 
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+
+.container {
+    width: 50%;
+    margin: 50px auto;
+    background-color: lightgreen; 
+    padding: 40px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px; 
+    text-align: center;
+}
+
+
+h2 {
+    font-size: 2em;
+    color: #e91e63; 
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+
+label {
+    display: block;
+    margin: 12px 0 6px;
+    font-size: 1.1em;
+    color: #e91e63; 
+    font-weight: bold;
+}
+
+[10:30 pm, 15/08/2004] Shahista: <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = htmlspecialchars($_POST['name']);
+    $email = htmlspecialchars($_POST['email']);
+    $phone = htmlspecialchars($_POST['phone']);
+    $dob = htmlspecialchars($_POST['dob']);
+       echo "<script>
+        window.location.href = 'index.html';
+        alert('Registration Successful');
+    </script>";
+}
+?>
